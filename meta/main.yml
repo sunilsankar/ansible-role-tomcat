@@ -1,0 +1,28 @@
+galaxy_info:
+  author: Sunil Sankar
+  description: Ansible role to install jdk 
+  role_name: java
+  namespace: sunilsankar
+
+
+  license: license (GPL-2.0-or-later, MIT, etc)
+
+  min_ansible_version: 2.9
+
+
+  
+  platforms:
+  - name: redhat
+    versions:
+     - 6
+     - 7
+     - 8
+     - 9
+ 
+
+  galaxy_tags: []
+
+dependencies: []
+  # List your role dependencies here, one per line. Be sure to remove the '[]' above,
+  # if you add dependencies to this list.
+  

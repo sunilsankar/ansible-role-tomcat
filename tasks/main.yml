@@ -1,0 +1,5 @@
+---
+- name: "Install Requirements"
+  include_role:
+         name: "java"
+...

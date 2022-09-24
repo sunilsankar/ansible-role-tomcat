@@ -1,0 +1,26 @@
+---
+dependency:
+  name: galaxy
+  options:
+    role-file: "molecule/shared/requirements.yml"
+driver:
+  name: docker
+platforms:
+  - name: almalinux
+    image: docker.io/sunilsankar/docker-almalinux
+    command: ${MOLECULE_DOCKER_COMMAND:-""}
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    privileged: true
+    pre_build_image: true
+provisioner:
+  name: ansible
+  lint: 
+    name: ansible-lint
+    enabled: True
+  playbooks:
+    converge: ${MOLECULE_PLAYBOOK:-converge.yml}
+verifier:
+  name: testinfra
+  lint:
+    name: flake8
